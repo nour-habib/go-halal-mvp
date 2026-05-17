@@ -190,47 +190,6 @@ client_app/
         └── sadaqah-sofra/
 ```
 
----
-
-## Running Locally
-
-**Prerequisites:** Java 24, Node.js 20+, PostgreSQL 15
-
-**Backend**
-```bash
-cd client_app/backend
-
-# PostgreSQL must be running with a 'gohalal' database
-# Default: localhost:5432, user: postgres, password: postgres
-
-./gradlew bootRun
-# API available at http://localhost:8080
-# Hibernate will auto-create all tables on first run
-```
-
-**Frontend**
-```bash
-cd client_app/ui
-npm install
-npm run dev
-# App available at http://localhost:3000/mvp
-```
-
-**Environment variables (frontend)**
-```
-NEXT_PUBLIC_API_URL=http://localhost:8080
-NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_key
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_key
-```
-
-**Environment variables (backend)**
-```
-DB_URL=jdbc:postgresql://localhost:5432/gohalal
-DB_USERNAME=postgres
-DB_PASSWORD=postgres
-STRIPE_SECRET_KEY=your_key
-JWT_SECRET=your_secret_at_least_32_chars
-```
 
 ---
 
@@ -254,16 +213,6 @@ JWT_SECRET=your_secret_at_least_32_chars
 | `POST` | `/api/checkout/payment-intent` | — | Create Stripe PaymentIntent |
 
 ---
-
-## What's Next
-
-- [ ] Rate limiting on auth endpoints (Bucket4j) to prevent brute-force
-- [ ] Cloudflare in front of the domain for DDoS protection
-- [ ] Migrate cart from session-based to user-bound on login
-- [ ] Email verification on registration (SendGrid / SES)
-- [ ] Restaurant admin dashboard (menu management, order acceptance)
-- [ ] Push notifications for order status updates
-- [ ] iOS/Android app (React Native)
 
 ---
 
