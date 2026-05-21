@@ -6,9 +6,7 @@
 
 ## Overview
 
-GoHalal is a production-oriented food delivery platform built from the ground up. The project covers the full product surface: a consumer-facing web app, a REST API backend, database design, authentication, payments, and a coming-soon landing page with a waitlist.
-
-The goal was to build something production-ready — not a tutorial project — with real decisions around security, performance, and user experience.
+GoHalal is a food delivery platform built from the ground up. The project covers the full product surface: a consumer-facing web app, a REST API backend, database design, authentication, payments, and a coming-soon landing page with a waitlist.
 
 ---
 
